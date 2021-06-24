@@ -1,4 +1,8 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
+
+import Movies from './Movies'
+import MovieInfo from './MovieInfo'
 
 function App () {
   // useEffect(() => {
@@ -13,7 +17,13 @@ function App () {
   // })
 
   return (
-    <h1>Team Get</h1>
+    <>
+      <h1>Movies</h1>
+      <div>
+        <Route exact path ="/" component={Movies}/>
+        <Route exact path='/movie/info' component={ MovieInfo }></Route>
+      </div>
+    </>
   )
 }
 
