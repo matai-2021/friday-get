@@ -1,10 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
 
-import Movies from './Movies'
-import MovieInfo from './MovieInfo'
-
-function App () {
+function MovieInfo () {
   // useEffect(() => {
   //   getWelcome()
   //     .then(res => {
@@ -17,14 +14,8 @@ function App () {
   // })
 
   return (
-    <>
-      <h1>Movies</h1>
-      <div>
-        < Movies />
-        <Route exact path='/movie/info' component={ MovieInfo }></Route>
-      </div>
-    </>
+    <h1>Team Get</h1>
   )
 }
 
-export default App
+export default MovieInfo
