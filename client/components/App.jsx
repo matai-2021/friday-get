@@ -20,7 +20,7 @@ function App () {
     <>
       <h1>Movies</h1>
       <div>
-        < Movies />
+        <Route exact path ="/" component={Movies}/>
         <Route exact path='/movie/info' component={ MovieInfo }></Route>
       </div>
     </>

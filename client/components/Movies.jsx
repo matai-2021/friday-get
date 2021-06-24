@@ -1,5 +1,4 @@
 import React from 'react'
-import { Route } from 'react-router-dom'
 
 function Movies () {
   // useEffect(() => {
@@ -14,7 +13,52 @@ function Movies () {
   // })
 
   return (
-    <h1>Team Get</h1>
+    <div>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+        <h2>Luca</h2>
+      </div>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+        <h2>Luca</h2>
+      </div>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+        <h2>Luca</h2>
+      </div>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+        <h2>Luca</h2>
+      </div>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+        <h2>Luca</h2>
+      </div>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+        <h2>Luca</h2>
+      </div>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+        <h2>Luca</h2>
+      </div>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+        <h2>Luca</h2>
+      </div>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+        <h2>Luca</h2>
+      </div>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+        <h2>Luca</h2>
+      </div>
+      <div>
+        <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+        <h2>Luca</h2>
+      </div>
+    </div>
   )
 }
 
