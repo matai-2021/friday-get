@@ -5,7 +5,6 @@ import { getMovie } from '../api.js'
 function MovieInfo () {
   const [movie, setMovie] = useState([])
   const { id } = useParams()
-  console.log(id)
   useEffect(() => {
     getMovie(id)
       .then(res => {
@@ -17,8 +16,6 @@ function MovieInfo () {
         console.error(err.message)
       })
   }, [])
-
-  console.log(movie.genres)
 
   return (
     <div>
@@ -32,6 +29,10 @@ function MovieInfo () {
         <p><strong>Homepage:</strong> {movie.homepage}</p>
         <p><strong>ate Released:</strong> {movie.release_date}</p>
         <p><strong>Rating</strong> (/10): {movie.vote_average}</p>
+        <p><strong>Genres:</strong></p>
+        {movie.genres?.map(gen => (
+          <p key={gen.id}><strong></strong>{gen.name}</p>
+        ))}
       </div>
     </div>
   )

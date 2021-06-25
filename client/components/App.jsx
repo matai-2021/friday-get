@@ -24,7 +24,6 @@ function App () {
       <div>
         <Route exact path ="/" render={() => <Movies movies={ movies }/>}/>
         <Route exact path='/movie/:id' render={() => <MovieInfo movies={ movies }/>}/>
-        
       </div>
     </>
   )
