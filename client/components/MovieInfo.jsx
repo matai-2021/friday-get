@@ -22,16 +22,21 @@ function MovieInfo () {
 
   return (
     <div>
-      <h2>{movie.title}</h2>
-      <div>
-        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
-        <p>{movie.overview}</p>
-      </div>
-      <div>
-        <h2>More Info</h2>
-        <p><strong>Homepage:</strong> {movie.homepage}</p>
-        <p><strong>ate Released:</strong> {movie.release_date}</p>
-        <p><strong>Rating</strong> (/10): {movie.vote_average}</p>
+      <h2 className="font-helvetica font-bold text-center text-6xl py-8">{movie.title}</h2>
+      <div className="grid grid-cols-2">
+        <div className="m-auto">
+          <img className="h-96" src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
+        </div>
+        <div className="font-helvetica m-auto pr-36">
+          <p>{movie.overview}</p>
+          <p><strong>Homepage:</strong> {movie.homepage}</p>
+          <p><strong>Date Released:</strong> {movie.release_date}</p>
+          <p><strong>Rating</strong> (/10): {movie.vote_average}</p>
+          <p><strong>Genres:</strong></p>
+        {movie.genres?.map(gen => (
+          <p key={gen.id}><strong></strong>{gen.name}</p>
+        ))}
+        </div>
       </div>
     </div>
   )
