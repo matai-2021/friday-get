@@ -18,7 +18,7 @@ function App () {
 
   return (
     <>
-      <h1>Movies</h1>
+      <h1 className="font-helvetica font-bold text-center text-6xl py-8">These are Movies</h1>
       <div>
         <Route exact path ="/" component={ Movies }/>
         <Route exact path='/movie/info' component={ MovieInfo }></Route>

@@ -17,11 +17,11 @@ function Movies () {
   })
 
   return (
-    <div>
+    <div className="grid grid-cols-4">
       { movies.map(item => (
-        <div key={item.id}>
-          <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}/>
-          <h2>{item.original_title}</h2>
+        <div className="m-auto" key={item.id}>
+          <img className="h-96 rounded-md m-auto shadow-md" src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}/>
+          <h2 className="font-helvetica text-center pt-2 pb-8 mx-16">{item.original_title}</h2>
         </div>
       )
       )}
@@ -31,8 +31,8 @@ function Movies () {
 
 export default Movies
 
-// Backup reference for HTML
-{ /* <div>
-<img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
-<h2>Luca</h2>
-</div> */ }
+// // Backup reference for HTML
+// { /* <div>
+// <img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
+// <h2>Luca</h2>
+// </div> */ }
