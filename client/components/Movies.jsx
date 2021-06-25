@@ -1,38 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import { getMovies } from '../api.js'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Movies () {
-  const [movies, setMovies] = useState([])
-  useEffect(() => {
-    getMovies()
-      .then(res => {
-        console.log(res)
-        setMovies(res.results)
-        // console.log(res.results)
-        return null
-      })
-      .catch((err) => {
-        console.error(err.message)
-      })
-  })
-
+function Movies ({ movies }) {
   return (
     <div>
       { movies.map(item => (
-        <div key={item.id}>
-          <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}/>
-          <h2>{item.original_title}</h2>
-        </div>
+        <Link key={item.id} to={`/movie/${item.id}`}>
+          <div>
+            <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}/>
+            <h2>{item.original_title}</h2>
+          </div>
+        </Link>
       )
       )}
     </div>
   )
 }
-
 export default Movies
-
-// Backup reference for HTML
-{ /* <div>
-<img src="https://image.tmdb.org/t/p/w500/7rhzEufovmmUqVjcbzMHTBQ2SCG.jpg"></img>
-<h2>Luca</h2>
-</div> */ }
