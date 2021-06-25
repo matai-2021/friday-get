@@ -10,21 +10,21 @@ function App () {
   useEffect(() => {
     getMovies()
       .then(res => {
-        console.log(res)
         setMovies(res.results)
         return null
       })
       .catch((err) => {
         console.error(err.message)
       })
-  })
+  }, [])
 
   return (
     <>
       <h1>Movies</h1>
       <div>
         <Route exact path ="/" render={() => <Movies movies={ movies }/>}/>
-        <Route exact path='/movie/:id' component={ MovieInfo }></Route>
+        <Route exact path='/movie/:id' render={() => <MovieInfo movies={ movies }/>}/>
+        
       </div>
     </>
   )
