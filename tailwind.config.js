@@ -1,7 +1,5 @@
 module.exports = {
-  purge: [
-    './src/**/*.html',
-    './src/**/*.js'],
+  purge: ['./server/**/*.html', './client/**/*.jsx'],
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {}
